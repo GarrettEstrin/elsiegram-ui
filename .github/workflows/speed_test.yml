@@ -1,0 +1,27 @@
+name: "Run speed test"
+
+on:
+  workflow_dispatch:
+  # pull_request:
+  #   branches:
+  #     - dev
+  #   types:
+  #     - closed
+jobs:
+  Run-Speed-Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: checkout dev branch
+        run: git checkout dev
+      - name: list directory
+        run: ls
+      # - name: Running Page Speed Insights
+      #   uses: ./.github/actions/speed-test
+      #   id: psi
+      #   with:
+      #     url: "https://fff-dev.com/get-the-box-2"
+      #     threshold: 70
+      #     strategy: mobile
+      #     key: ${{ secrets.INSIGHTSAPIKEY }}
