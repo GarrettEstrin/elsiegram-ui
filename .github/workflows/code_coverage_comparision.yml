@@ -1,0 +1,2 @@
+- name: Jest Coverage Diff
+  uses: anuraag016/Jest-Coverage-Diff@V1.4
